@@ -1,358 +1,885 @@
-<!DOCTYPE html>  
-<html lang="pt">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Vetua Kia Nzuzi Training & Industrial Services</title>  
-  
-<style>  
-*{  
-    margin:0;  
-    padding:0;  
-    box-sizing:border-box;  
-    font-family:Arial, Helvetica, sans-serif;  
-}  
-  
-body{  
-    background:#f4f7fa;  
-    color:#333;  
-    line-height:1.6;  
-}  
-  
-header{  
-    background:linear-gradient(135deg,#003366,#00509d);  
-<img src="logo.png" alt="Vetua Kia Nzuzi Logo" style="max-width:200px;display:block;margin:20px auto;">
-    color:white;  
-    padding:80px 20px;  
-    text-align:center;  
-}  
-  
-header h1{  
-    font-size:3rem;  
-    margin-bottom:10px;  
-}  
-  
-header h2{  
-    margin-bottom:20px;  
-    color:#f9b000;  
-}  
-  
-header p{  
-    font-size:1.2rem;  
-    max-width:900px;  
-    margin:auto;  
-}  
-  
-.btn{  
-    display:inline-block;  
-    margin-top:30px;  
-    padding:14px 35px;  
-    background:#f9b000;  
-    color:#000;  
-    text-decoration:none;  
-    border-radius:6px;  
-    font-weight:bold;  
-}  
-  
-section{  
-    padding:60px 10%;  
-}  
-  
-.section-title{  
-    text-align:center;  
-    font-size:2rem;  
-    margin-bottom:40px;  
-    color:#003366;  
-}  
-  <section>
-<h2 class="section-title">Catálogo Industrial</h2>
-<img src="catalogo.jpg" alt="Catálogo Industrial" style="width:100%;border-radius:10px;">
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vetua Kia Nzuzi — Training & Industrial Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0D1E35;
+  --navy-mid: #152840;
+  --navy-light: #1E3A54;
+  --gold: #C8960C;
+  --gold-light: #E8B020;
+  --white: #FFFFFF;
+  --off-white: #F0F4F8;
+  --gray: #8A9BAD;
+  --text: #2C3E50;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13, 30, 53, 0.96);
+  backdrop-filter: blur(8px);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  border-bottom: 1px solid rgba(200, 150, 12, 0.2);
+}
+
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy) !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600 !important;
+  color: var(--navy);
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  padding: 100px 5% 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 0%, var(--navy-light) 100%);
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+/* diagonal gold accent */
+.hero-accent {
+  position: absolute;
+  top: 0; right: 30%;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  margin: 24px 0 36px;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-pillars {
+  position: absolute;
+  bottom: 40px;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  gap: 40px;
+  z-index: 2;
+}
+
+.pillar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pillar::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── MISSÃO ── */
+.mission {
+  background: var(--off-white);
+  padding: 80px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+.mission-block {
+  background: var(--white);
+  padding: 40px 32px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.mission-block:hover { border-color: var(--gold); }
+
+.mission-label {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.mission-block h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.mission-block p {
+  font-size: 0.9rem;
+  color: #5A6A7A;
+  line-height: 1.7;
+}
+
+/* ── SECÇÃO GENÉRICA ── */
+.section {
+  padding: 80px 5%;
+}
+
+.section-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.section-dark .section-title { color: var(--white); }
+
+/* ── SERVIÇOS DE FORMAÇÃO ── */
+.formacao-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.formacao-card {
+  background: var(--navy-mid);
+  border: 1px solid rgba(200, 150, 12, 0.15);
+  border-radius: 6px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.formacao-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.formacao-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.formacao-card:hover::before { opacity: 1; }
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(200, 150, 12, 0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+.formacao-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.formacao-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formacao-card ul li {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.formacao-card ul li::before {
+  content: '—';
+  color: var(--gold);
+  font-size: 0.7rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* ── CONSULTORIA ── */
+.consultoria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.consultoria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.consultoria-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--off-white);
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.c-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold);
+  opacity: 0.4;
+  min-width: 32px;
+}
+
+/* ── FORNECIMENTO ── */
+.fornecimento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.fornecimento-card {
+  background: var(--white);
+  border: 1px solid #E0E8F0;
+  border-radius: 6px;
+  padding: 28px 24px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.fornecimento-card:hover {
+  box-shadow: 0 8px 24px rgba(13,30,53,0.08);
+  border-color: var(--gold);
+}
+
+.fornecimento-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.fornecimento-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.fornecimento-card ul li {
+  font-size: 0.85rem;
+  color: #5A6A7A;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fornecimento-card ul li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── CLIENTES ALVO ── */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cliente-tag {
+  background: rgba(200, 150, 12, 0.08);
+  border: 1px solid rgba(200, 150, 12, 0.2);
+  border-radius: 6px;
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+
+.cliente-tag:hover {
+  background: rgba(200, 150, 12, 0.18);
+}
+
+/* ── VANTAGENS ── */
+.vantagens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.vantagem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.v-check {
+  width: 32px;
+  height: 32px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.v-check svg { width: 14px; height: 14px; stroke: var(--navy); fill: none; stroke-width: 2.5; }
+
+.vantagem h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.vantagem p {
+  font-size: 0.82rem;
+  color: #6A7A8A;
+  line-height: 1.6;
+}
+
+/* ── CONTACTO ── */
+.contact-section {
+  background: var(--navy);
+  padding: 80px 5%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.contact-info h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.contact-info p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+}
+
+.contact-row svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus { border-color: var(--gold); }
+
+.contact-form select option { background: var(--navy); }
+
+.contact-form textarea { rows: 5; resize: vertical; min-height: 120px; }
+
+.contact-form button {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form button:hover { background: var(--gold-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: #070F1C;
+  padding: 32px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(200,150,12,0.15);
+}
+
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+.footer-logo span { color: var(--gold); }
+
+.footer-slogan {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ── WHATSAPP FLOAT ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: #25D366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+}
+
+.whatsapp-float svg { width: 18px; height: 18px; fill: white; }
+
+/* ── DIVIDER ── */
+.gold-line {
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .formacao-grid,
+  .fornecimento-grid,
+  .clientes-grid,
+  .vantagens-grid { grid-template-columns: 1fr 1fr; }
+  .mission { grid-template-columns: 1fr; }
+  .consultoria-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hero-pillars { display: none; }
+}
+
+@media (max-width: 600px) {
+  .formacao-grid,
+  .fornecimento-grid,
+  .clientes-grid,
+  .vantagens-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">VETUA <span>KIA NZUZI</span></div>
+  <ul class="nav-links">
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#consultoria">Consultoria</a></li>
+    <li><a href="#fornecimento">Fornecimento</a></li>
+    <li><a href="#contacto" class="nav-cta">Solicitar Serviço</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Est. 2007 · Luanda · Soyo · Angola</p>
+    <h1>Segurança Industrial<em>& Formação</em></h1>
+    <p class="hero-sub">
+      Soluções completas para ambientes de trabalho mais seguros e produtivos.
+      Formação profissional, consultoria técnica e fornecimento industrial
+      para os sectores mais exigentes de Angola.
+    </p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Solicitar Serviço</a>
+      <a href="https://wa.me/244939350234" class="btn-outline" target="_blank">WhatsApp Directo</a>
+    </div>
+  </div>
+  <div class="hero-pillars">
+    <div class="pillar">Formar</div>
+    <div class="pillar">Proteger</div>
+    <div class="pillar">Servir</div>
+  </div>
 </section>
-.about{  
-    text-align:center;  
-    max-width:900px;  
-    margin:auto;  
-}  
-  <section>
-<h2 class="section-title">Extintores e Sistemas Contra Incêndio</h2>
-<img src="naffco100l.jpg" alt="Naffco 100L" style="width:100%;border-radius:10px;">
+
+<!-- MISSÃO / VISÃO / VALORES -->
+<div class="mission">
+  <div class="mission-block">
+    <div class="mission-label">Missão</div>
+    <h3>Capacitar</h3>
+    <p>Capacitar profissionais e fornecer soluções técnicas que promovam ambientes de trabalho seguros, eficientes e produtivos.</p>
+  </div>
+  <div class="mission-block">
+    <div class="mission-label">Visão</div>
+    <h3>Referência</h3>
+    <p>Ser referência nacional em formação profissional, segurança industrial e suporte operacional em Angola.</p>
+  </div>
+  <div class="mission-block">
+    <div class="mission-label">Valores</div>
+    <h3>Princípios</h3>
+    <p>Segurança · Profissionalismo · Integridade · Excelência · Responsabilidade · Inovação</p>
+  </div>
+</div>
+
+<!-- FORMAÇÃO -->
+<section class="section section-dark" id="formacao">
+  <div class="section-header">
+    <div class="section-eyebrow">Serviços de Formação</div>
+    <div class="gold-line"></div>
+    <h2 class="section-title">Capacitação Profissional</h2>
+  </div>
+  <div class="formacao-grid">
+
+    <div class="formacao-card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Segurança & Emergência</h3>
+      <ul>
+        <li>Combate e Controlo de Incêndios</li>
+        <li>Evacuação e Escape de Emergência</li>
+        <li>Uso Seguro de EPIs</li>
+        <li>Primeiros Socorros</li>
+        <li>Gestão de Emergências</li>
+        <li>Identificação e Avaliação de Riscos</li>
+      </ul>
+    </div>
+
+    <div class="formacao-card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <h3>Segurança Aquática & Salvamento</h3>
+      <ul>
+        <li>Utilização de Boias Salva-Vidas</li>
+        <li>Técnicas Básicas de Salvamento</li>
+        <li>Simulação de Afogamento</li>
+        <li>Procedimentos de Resgate</li>
+        <li>Primeiros Socorros em Meio Aquático</li>
+        <li>RCP — Reanimação Cardiopulmonar</li>
+      </ul>
+    </div>
+
+    <div class="formacao-card">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
+      <h3>Formação HSE</h3>
+      <ul>
+        <li>Introdução ao HSE</li>
+        <li>Cultura de Segurança</li>
+        <li>Investigação de Incidentes</li>
+        <li>Permissão de Trabalho</li>
+        <li>Gestão de Riscos Operacionais</li>
+        <li>Segurança Industrial</li>
+      </ul>
+    </div>
+
+  </div>
 </section>
-.services{  
-    display:grid;  
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  
-    gap:25px;  
-}  
-  
-.card{  
-    background:white;  
-    padding:25px;  
-    border-radius:10px;  
-    box-shadow:0 3px 10px rgba(0,0,0,.1);  
-}  
-  
-.card h3{  
-    color:#003366;  
-    margin-bottom:15px;  
-}  
-  
-.card ul{  
-    padding-left:20px;  
-}  
-  
-.card li{  
-    margin-bottom:8px;  
-}  
-  
-.stats{  
-    background:#003366;  
-    color:white;  
-}  
-  
-.stats-container{  
-    display:grid;  
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));  
-    text-align:center;  
-    gap:20px;  
-}  
-  
-.stat h2{  
-    font-size:2.5rem;  
-}  
-  
-.contact{  
-    background:white;  
-}  
-  
-form{  
-    max-width:700px;  
-    margin:auto;  
-}  
-  
-input, textarea{  
-    width:100%;  
-    padding:12px;  
-    margin-bottom:15px;  
-    border:1px solid #ccc;  
-    border-radius:5px;  
-}  
-  
-button{  
-    background:#003366;  
-    color:white;  
-    border:none;  
-    padding:15px 25px;  
-    border-radius:5px;  
-    cursor:pointer;  
-}  
-  
-footer{  
-    background:#001f3f;  
-    color:white;  
-    text-align:center;  
-    padding:30px;  
-}  
-  
-footer a{  
-    color:#f9b000;  
-    text-decoration:none;  
-}  
-  
-.whatsapp{  
-    position:fixed;  
-    right:20px;  
-    bottom:20px;  
-    background:#25D366;  
-    color:white;  
-    text-decoration:none;  
-    padding:15px 20px;  
-    border-radius:50px;  
-    font-weight:bold;  
-    box-shadow:0 3px 10px rgba(0,0,0,.3);  
-}  
-</style>  
-</head>  
-  
-<body>  
-  
-<header>  
-    <h1>VETUA KIA NZUZI</h1>  
-    <h2>Training & Industrial Services</h2>  
-  
-    <p>  
-        Professional Solutions for Oil & Gas, Industrial Services,  
-        Training, Logistics, Technology and Operational Support Across Angola.  
-    </p>  
-  
-    <a href="#contact" class="btn">  
-        Solicitar Serviço  
-    </a>  
-</header>  
-  
-<section>  
-    <h2 class="section-title">Sobre Nós</h2>  
-  
-    <div class="about">  
-        <p>  
-            A Vetua Kia Nzuzi Training & Industrial Services é uma empresa  
-            angolana especializada em formação profissional, serviços industriais,  
-            suporte operacional, tecnologia, logística e fornecimento de soluções  
-            para os setores de Petróleo & Gás, Energia, Construção, Indústria e  
-            Operações Marítimas.  
-        </p>  
-    </div>  
-</section>  
-  <section>
-<h2 class="section-title">Formulário de Solicitação</h2>
-<img src="formulario.jpg" alt="Formulário" style="width:100%;border-radius:10px;">
-</section>
-<section>  
-    <h2 class="section-title">Nossos Serviços</h2>  
-  
-    <div class="services">  
-  
-        <div class="card">  
-            <h3>Formação Profissional</h3>  
-            <ul>  
-                <li>HSE</li>  
-                <li>Combate a Incêndios</li>  
-                <li>Primeiros Socorros</li>  
-                <li>Trabalho em Altura</li>  
-                <li>Espaços Confinados</li>  
-            </ul>  
-        </div>  
-  
-        <div class="card">  
-            <h3>Serviços Industriais</h3>  
-            <ul>  
-                <li>Manutenção Industrial</li>  
-                <li>Supervisão de Segurança</li>  
-                <li>Suporte Operacional</li>  
-                <li>Consultoria Técnica</li>  
-                <li>Inspeções Técnicas</li>  
-            </ul>  
-        </div>  
-  
-        <div class="card">  
-            <h3>Tecnologia e Redes</h3>  
-            <ul>  
-                <li>Infraestrutura de TI</li>  
-                <li>Redes Informáticas</li>  
-                <li>CCTV</li>  
-                <li>Suporte Técnico</li>  
-                <li>Manutenção de Equipamentos</li>  
-            </ul>  
-        </div>  
-  
-        <div class="card">  
-            <h3>Logística e Fornecimento</h3>  
-            <ul>  
-                <li>EPIs</li>  
-                <li>Equipamentos Industriais</li>  
-                <li>Ferramentas</li>  
-                <li>Compras Técnicas</li>  
-                <li>Serviços Logísticos</li>  
-            </ul>  
-        </div>  
-  
-    </div>  
-</section>  
-  
-<section class="stats">  
-    <div class="stats-container">  
-  
-        <div class="stat">  
-            <h2>24/7</h2>  
-            <p>Suporte Operacional</p>  
-        </div>  
-  
-        <div class="stat">  
-            <h2>100%</h2>  
-            <p>Compromisso com Segurança</p>  
-        </div>  
-  
-        <div class="stat">  
-            <h2>HSE</h2>  
-            <p>Padrões Internacionais</p>  
-        </div>  
-  
-        <div class="stat">  
-            <h2>ANGOLA</h2>  
-            <p>Cobertura Nacional</p>  
-        </div>  
-  
-    </div>  
-</section>  
-  
-<section>  
-    <h2 class="section-title">Por Que Escolher a Vetua?</h2>  
-  
-    <div class="services">  
-  
-        <div class="card">  
-            <h3>Equipa Qualificada</h3>  
-            <p>Profissionais experientes focados em qualidade e segurança.</p>  
-        </div>  
-  
-        <div class="card">  
-            <h3>Resposta Rápida</h3>  
-            <p>Mobilização rápida para necessidades industriais e operacionais.</p>  
-        </div>  
-  
-        <div class="card">  
-            <h3>Soluções Confiáveis</h3>  
-            <p>Serviços adaptados às necessidades específicas de cada cliente.</p>  
-        </div>  
-  
-    </div>  
-</section>  
-  
-<section id="contact" class="contact">  
-    <h2 class="section-title">Solicitar Serviço</h2>  
-  
-    <form>  
-        <input type="text" placeholder="Nome da Empresa">  
-        <input type="text" placeholder="Responsável">  
-        <input type="email" placeholder="E-mail">  
-        <input type="text" placeholder="Telefone">  
-        <input type="text" placeholder="Serviço Pretendido">  
-  
-        <textarea rows="6" placeholder="Descreva a sua necessidade"></textarea>  
-  
-        <button type="submit">Enviar Solicitação</button>  
-    </form>  
-</section>  
-  
-<footer>  
-    <h3>Vetua Kia Nzuzi Training & Industrial Services</h3>  
-  
-    <p>Luanda • Soyo • Angola</p>  
-  
-    <p>  
-        E-mail:  
-        <a href="mailto:pftudo@outlook.com">  
-            pftudo@outlook.com  
-        </a>  
-    </p>  
-  
-    <p>  
-        WhatsApp:  
-        <a href="https://wa.me/244939350234">  
-            +244 939 350 234  
-        </a>  
-    </p>  
-  
-    <p>  
-        Formação Profissional | Serviços Industriais |  
-        Tecnologia | Logística  
-    </p>  
-</footer>  
-  
-<a class="whatsapp"  
-href="https://wa.me/244939350234?text=Olá%20Vetua%20Kia%20Nzuzi,%20gostaria%20de%20solicitar%20um%20serviço.">  
-WhatsApp  
-</a>  
-  
-</body>  
-</html>  
-  
-Acho que esse código não estava mal. 
+
+<!-- CONSULTORIA -->
+<section class="section" id="consultoria">
+  <div class="section-header">
+    <div class="section-eyebrow">Consultoria Técnica</div>
+    <div class="gold-line"></div>
+    <h2 class="section-title">Serviços de Suporte Operacional</h2>
+  </div>
+  <div class="consultoria-grid">
+    <div class="consultoria-list">
+      <div class="consultoria-item"><span class="c-num">01</span>Planos de Emergência</div>
+      <div class="consultoria-item"><span class="c-num">02</span>Simulacros de Evacuação</div>
+      <div class="consultoria-item"><span class="c-num">03</span>Inspecções de Segurança</div>
+      <div class="consultoria-item"><span class="c-num">04</span>Auditorias Básicas de SST</div>
+      <div class="consultoria-item"><span class="c-num">05</span>Treinamentos In Company</div>
+      <div class="consultoria-item"><span class="c-num">06</span>Sensibilização de Equipas</div>
+    </div>
+    <div style="background:var(--navy); border-radius:8px; padding:40px 36px; color:white;">
+      <div class="section-eyebrow" style="margin-bottom:16px;">Porquê a Vetua?</div>
+      <div class="vantagens-grid" style="grid-template-columns:1fr; gap:20px;">
+        <div class="vantagem">
+          <div class="v-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <h4 style="color:white;">Formação teórica e prática</h4>
+            <p style="color:rgba(255,255,255,0.5);">Metodologia com aplicação real em campo.</p>
+          </div>
+        </div>
+        <div class="vantagem">
+          <div class="v-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <h4 style="color:white;">Actuação integrada</h4>
+            <p style="color:rgba(255,255,255,0.5);">Formação + Consultoria + Fornecimento num único parceiro.</p>
+          </div>
+        </div>
+        <div class="vantagem">
+          <div class="v-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <h4 style="color:white;">Flexibilidade operacional</h4>
+            <p style="color:rgba(255,255,255,0.5);">Mobilização conforme a necessidade do projecto.</p>
+          </
