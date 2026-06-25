@@ -882,4 +882,201 @@ footer {
           <div>
             <h4 style="color:white;">Flexibilidade operacional</h4>
             <p style="color:rgba(255,255,255,0.5);">Mobilização conforme a necessidade do projecto.</p>
-          </
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORNECIMENTO -->
+<section class="section" id="fornecimento" style="background:var(--off-white);">
+  <div class="section-header">
+    <div class="section-eyebrow">Fornecimento Industrial</div>
+    <div class="gold-line"></div>
+    <h2 class="section-title">Equipamentos & Materiais</h2>
+  </div>
+  <div class="fornecimento-grid">
+    <div class="fornecimento-card">
+      <h3>Equipamentos de Protecção</h3>
+      <ul>
+        <li>Capacetes de segurança</li>
+        <li>Luvas de protecção</li>
+        <li>Óculos de segurança</li>
+        <li>Máscaras de protecção</li>
+        <li>Botas de segurança</li>
+        <li>Fatos de trabalho</li>
+      </ul>
+    </div>
+
+    <div class="fornecimento-card">
+      <h3>Uniformes Profissionais</h3>
+      <ul>
+        <li>Uniformes industriais</li>
+        <li>Uniformes escolares</li>
+        <li>Uniformes corporativos</li>
+        <li>Vestuário de alta visibilidade</li>
+        <li>Personalização com branding</li>
+      </ul>
+    </div>
+
+    <div class="fornecimento-card">
+      <h3>Material de Apoio Operacional</h3>
+      <ul>
+        <li>Material de escritório</li>
+        <li>Ferramentas básicas</li>
+        <li>Sinalização industrial</li>
+        <li>Kits de primeiros socorros</li>
+        <li>Lubrificantes industriais</li>
+        <li>Equipamentos de apoio industrial</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES ALVO -->
+<section class="section section-dark">
+  <div class="section-header">
+    <div class="section-eyebrow">Clientes Alvo</div>
+    <div class="gold-line"></div>
+    <h2 class="section-title">Sectores que Servimos</h2>
+  </div>
+
+  <div class="clientes-grid">
+    <div class="cliente-tag">Empresas Petrolíferas</div>
+    <div class="cliente-tag">Empresas Offshore</div>
+    <div class="cliente-tag">Operadores Marítimos</div>
+    <div class="cliente-tag">Hotéis e Resorts</div>
+    <div class="cliente-tag">Construção Civil</div>
+    <div class="cliente-tag">Escolas e Instituições</div>
+    <div class="cliente-tag">Organizações Públicas</div>
+    <div class="cliente-tag">Indústria em Geral</div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact-section" id="contacto">
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <div class="section-eyebrow">Contacto</div>
+      <h2>Solicitar<em>Serviço</em></h2>
+
+      <p>
+        Descreva a sua necessidade e a nossa equipa responde em menos de
+        24 horas. Actuamos em Luanda, Soyo e demais localidades mediante
+        mobilização.
+      </p>
+
+      <div class="contact-details">
+
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          +244 928 350 826 | +244 939 350 234
+        </div>
+
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          pftudo@outlook.com
+        </div>
+
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Samba, Luanda · Soyo · Província do Zaire
+        </div>
+
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="enviarWhatsApp(event)">
+      <input type="text" id="empresa" placeholder="Nome da Empresa" required>
+      <input type="text" id="responsavel" placeholder="Nome do Responsável" required>
+      <input type="tel" id="telefone" placeholder="Telefone / WhatsApp">
+
+      <select id="servico">
+        <option value="" disabled selected>Serviço Pretendido</option>
+        <option>Formação HSE</option>
+        <option>Segurança e Emergência</option>
+        <option>Segurança Aquática e Salvamento</option>
+        <option>Consultoria e Auditoria SST</option>
+        <option>Fornecimento de EPI</option>
+        <option>Uniformes Profissionais</option>
+        <option>Material de Apoio Operacional</option>
+        <option>Outro</option>
+      </select>
+
+      <textarea id="mensagem" placeholder="Descreva a sua necessidade operacional"></textarea>
+
+      <button type="submit">
+        Enviar via WhatsApp
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    VETUA <span>KIA NZUZI</span>
+  </div>
+
+  <div class="footer-slogan">
+    Formar · Proteger · Servir
+  </div>
+
+  <div class="footer-copy">
+    © 2025 Vetua Kia Nzuzi. Luanda, Angola.
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float"
+   href="https://wa.me/244939350234?text=Olá%20Vetua%20Kia%20Nzuzi,%20gostaria%20de%20solicitar%20um%20serviço."
+   target="_blank">
+
+  <svg viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+  </svg>
+
+  WhatsApp
+</a>
+
+<script>
+function enviarWhatsApp(e) {
+  e.preventDefault();
+
+  const empresa = document.getElementById('empresa').value;
+  const responsavel = document.getElementById('responsavel').value;
+  const telefone = document.getElementById('telefone').value;
+  const servico = document.getElementById('servico').value;
+  const mensagem = document.getElementById('mensagem').value;
+
+  const texto =
+`Olá Vetua Kia Nzuzi,
+
+*Empresa:* ${empresa}
+*Responsável:* ${responsavel}
+*Telefone:* ${telefone}
+*Serviço:* ${servico}
+
+*Mensagem:*
+${mensagem}`;
+
+  window.open(
+    `https://wa.me/244939350234?text=${encodeURIComponent(texto)}`,
+    '_blank'
+  );
+}
+</script>
+
+</body>
+                                                </html>
